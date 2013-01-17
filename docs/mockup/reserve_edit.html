@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>CleanDream</title>
+
+<style type="text/css">
+@import url("css/style.css");
+
+@import url('css/style_text.css');
+
+@import url('css/form-buttons.css');
+
+@import url('css/link-buttons.css');
+
+@import url('css/menu.css');
+
+@import url('css/statics.css');
+
+@import url('css/messages.css');
+
+@import url('css/datatable.css');
+
+@import url('css/accordion.css');
+
+@import url('css/tabs.css');
+
+@import url('css/forms.css');
+
+@import url('css/datepicker.css');
+
+@import url('css/modalbox.css');
+
+@import url('css/jquery.fancybox-1.3.4.css');
+
+@import url('css/jquery.treeview.css');
+
+@import url('css/wysiwyg.css');
+
+@import url('css/wysiwyg.modal.css');
+
+@import url('css/wysiwyg-editor.css');
+</style>
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="js/excanvas.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<div class="logo-labels">
+			<h1>
+				<a href="#">CleanDream</a>
+			</h1>
+			<ul>
+				<li class="usermessage"><a href="user.html"><span>設定</span></a></li>
+				<li class="usermessage"><a href="#"><span>1件メッセージ</span></a></li>
+				<li class="logout"><a href="index.html"><span>ログアウト[ユーザ名称]</span></a></li>
+			</ul>
+		</div>
+		<div class="menu-search">
+			<ul>
+				<li><a href="client.html">コンタクト依頼</a></li>
+				<li><a href="contact.html">連絡綱</a></li>
+				<li><a href="reserve.html">予定</a></li>
+				<li><a href="task.html">業務依頼</a></li>
+				<li><a href="log.html">業務日誌</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li class="current">
+					<a href="#">マスタ管理</a>
+					<ul> 
+						<li><a href="right.html">権限マスタ</a></li>
+						<li><a href="group.html">権限グループマスタ</a></li>
+						<li><a href="client_info.html">顧客マスタ</a></li>
+						<li><a href="customers.html">顧客コンタクト</a></li>
+						<li><a href="service.html">施設マスタ</a></li>
+					</ul> 
+				</li>
+			</ul>
+		</div>
+		<div class="breadcrumbs">
+			<ul>
+				<li class="home"><a href="dashboard.html"></a></li>
+				<li class="break">&#187;</li>
+				<li><a href="reserve.html">予定</a></li>
+				<li class="break">&#187;</li>
+				<li>編集中</li>
+			</ul>
+		</div>
+		<div class="section">
+			<div class="full">
+				<div class="box">
+					<div class="title">
+						<h2>区分</h2>
+						<span class="hide"></span>
+					</div>
+					<div class="content forms">
+						<form action="" method="post">
+							<div class="line">
+								<label>区分</label>
+								<input type="radio" name="radiobutton" id="radio-1" checked="checked" /> 
+								<label for="radio-1">通常予定</label>
+								
+								<input type="radio" name="radiobutton" id="radio-2" /> 
+								<label for="radio-2">翌日以降まで続く予定</label>
+								
+								<input type="radio" name="radiobutton" id="radio-3" /> 
+								<label for="radio-3">期間予定</label>
+								
+								<input type="radio" name="radiobutton" id="radio-4" /> 
+								<label for="radio-4">繰り返し予定</label>
+	
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section">
+			<div class="full">
+				<div class="box">
+					<div class="title">
+						<h2>通常予定</h2>
+						<span class="hide"></span>
+					</div>
+					<div class="content forms">
+						<form action="" method="post">
+							<div class="line">
+								<label>予定時間</label>
+								<input type="text" class="timepicker"/> - <input type="text" class="timepicker"/>
+							</div>
+							<div class="line">
+								<label>会社情報</label>
+								<input type="text" class="small"/> <a href="client_info.html">検索</a>
+							</div>
+							<div class="line">
+								<label>予定</label>
+								<select class="small">
+								<option selected="selected" value="">会議</option>
+								<option value="">休み</option>
+								</select>
+								<input type="text" class="medium"/>
+							</div>
+							<div class="line">
+								<label>メモ</label>
+								<textarea class="big" rows="" cols=""></textarea>
+							</div>
+							<div class="line">
+								<label>参加者</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line">
+								<label>施設</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line">
+								<label></label>
+								<input type="radio" name="radiobutton0" id="radio1-1" checked="checked" /> 
+								<label for="radio1-1">公開 </label>
+								
+								<input type="radio" name="radiobutton0" id="radio1-2" /> 
+								<label for="radio1-2">非公開</label>
+							</div>
+							<div class="line button">
+							<button type="submit" class="blue"><span>登録</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section">
+			<div class="full">
+				<div class="box">
+					<div class="title">
+						<h2>翌日以降まで続く予定</h2>
+						<span class="hide"></span>
+					</div>
+					<div class="content forms">
+						<form action="" method="post">
+							<div class="line">
+								<label>予定時間</label>
+								<input type="text" class="timepicker"/> - <input type="text" class="timepicker"/>
+							</div>
+							<div class="line">
+								<label>会社情報</label>
+								<input type="text" class="small"/> <a href="client_info.html">検索</a>
+							</div>
+							<div class="line">
+								<label>予定</label>
+								<select class="small">
+								<option selected="selected" value="">会議</option>
+								<option value="">休み</option>
+								</select>
+								<input type="text" class="medium"/>
+							</div>
+							<div class="line">
+								<label>メモ</label>
+								<textarea class="big" rows="" cols=""></textarea>
+							</div>
+							<div class="line">
+								<label>参加者</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line">
+								<label>施設</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line">
+								<label></label>
+								<input type="radio" name="radiobutton1" id="radio2-1" checked="checked" /> 
+								<label for="radio2-1">公開</label>
+								
+								<input type="radio" name="radiobutton1" id="radio2-2" /> 
+								<label for="radio2-2">非公開</label>
+							</div>
+							<div class="line button">
+							<button type="submit" class="blue"><span>登録</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section">
+			<div class="full">
+				<div class="box">
+					<div class="title">
+						<h2>繰り返し予定</h2>
+						<span class="hide"></span>
+					</div>
+					<div class="content forms">
+						<form action="" method="post">
+							<div class="line">
+								<label>予定時間</label>
+								<input type="text" class="datepicker"/> - <input type="text" class="datepicker"/>
+							</div>
+							<div class="line">
+								<label>会社情報</label>
+								<input type="text" class="small"/> <a href="client_info.html">検索</a>
+							</div>
+							<div class="line">
+								<label>予定</label>
+								<select class="small">
+								<option selected="selected" value="">会議</option>
+								<option value="">休み</option>
+								</select>
+								<input type="text" class="medium"/>
+							</div>
+							<div class="line">
+								<label>メモ</label>
+								<textarea class="big" rows="" cols=""></textarea>
+							</div>
+							<div class="line">
+								<label>参加者</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line button">
+							<button type="submit" class="blue"><span>登録</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section">
+			<div class="full">
+				<div class="box">
+					<div class="title">
+						<h2>期間予定</h2>
+						<span class="hide"></span>
+					</div>
+					<div class="content forms">
+						<form action="" method="post">
+							<div class="line">
+								<label>期間</label>
+								<h3>繰り返し条件</h3>
+								<br/>
+								<input type="radio" name="radiobutton5" id="radio5-1" /> 
+								<label for="radio5-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毎日 </label>
+								<br/>
+								<input type="radio" name="radiobutton5" id="radio5-2" /> 
+								<label for="radio5-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毎日（土日を除く） </label>
+								<br/>
+								<input type="radio" name="radiobutton5" id="radio5-3" /> 
+								<label for="radio5-3"></label>
+								<select name="Week" class="small">
+									 <option value="week" selected>毎週</option>
+									 <option value="1stweek" >毎月 第1</option>
+									 <option value="2ndweek" >毎月 第2</option>
+									 <option value="3rdweek" >毎月 第3</option>
+									 <option value="4thweek" >毎月 第4</option>
+									 <option value="lastweek" >毎月 最終</option>
+									 </select>
+									 <select name="WDay" class="small">
+									 <option value="0" >日曜日</option>
+									 <option value="1" >月曜日</option>
+									 <option value="2" >火曜日</option>
+									 <option value="3" selected>水曜日</option>
+									 <option value="4" >木曜日</option>
+									 <option value="5" >金曜日</option>
+									 <option value="6" >土曜日</option>
+									 </select>				
+								<br/>
+								<input type="radio" name="radiobutton5" id="radio5-4" /> 
+								<label for="radio5-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毎月</label>
+								<select name=Day class="small">
+									<option value=1>1日</option><option value=2>2日</option><option value=3>3日</option><option value=4>4日</option><option value=5>5日</option><option value=6>6日</option><option value=7>7日</option><option value=8>8日</option><option value=9>9日</option><option value=10>10日</option><option value=11>11日</option><option value=12>12日</option><option value=13>13日</option><option value=14>14日</option><option value=15>15日</option><option value=16 selected>16日</option><option value=17>17日</option><option value=18>18日</option><option value=19>19日</option><option value=20>20日</option><option value=21>21日</option><option value=22>22日</option><option value=23>23日</option><option value=24>24日</option><option value=25>25日</option><option value=26>26日</option><option value=27>27日</option><option value=28>28日</option><option value=29>29日</option><option value=30>30日</option><option value=31>31日</option> <option value="0" >月末</option>
+ 								</select>
+								<br/>
+								<h3>期限</h3>
+								<br/>
+								<input type="radio" name="radiobutton4" id="radio4-1" /> 
+								<label for="radio4-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期限なし  </label>
+								<br/>
+								<input type="radio" name="radiobutton4" id="radio4-2" />
+								<label for="radio4-2"> </label>
+								<input type="text" class="datepicker"/>
+							</div>
+							<div class="line">
+								<label>時間</label>
+								<select class="small">
+								<option selected="selected" value="">00</option>
+								<option value="">01</option>
+								<option value="">02</option>
+								<option value="">03</option>
+								<option value="">04</option>
+								<option value="">05</option>
+								<option value="">06</option>
+								<option value="">07</option>
+								<option value="">08</option>
+								<option value="">09</option>
+								<option value="">10</option>
+								<option value="">11</option>
+								<option value="">12</option>
+								<option value="">13</option>
+								<option value="">14</option>
+								<option value="">15</option>
+								<option value="">16</option>
+								<option value="">17</option>
+								<option value="">18</option>
+								<option value="">19</option>
+								<option value="">20</option>
+								<option value="">21</option>
+								<option value="">22</option>
+								<option value="">23</option>
+							</select>
+								<select class="small">
+								<option selected="selected" value="">00</option>
+								<option value="">30</option>
+							</select>
+							~
+							<select class="small">
+								<option selected="selected" value="">00</option>
+								<option value="">01</option>
+								<option value="">02</option>
+								<option value="">03</option>
+								<option value="">04</option>
+								<option value="">05</option>
+								<option value="">06</option>
+								<option value="">07</option>
+								<option value="">08</option>
+								<option value="">09</option>
+								<option value="">10</option>
+								<option value="">11</option>
+								<option value="">12</option>
+								<option value="">13</option>
+								<option value="">14</option>
+								<option value="">15</option>
+								<option value="">16</option>
+								<option value="">17</option>
+								<option value="">18</option>
+								<option value="">19</option>
+								<option value="">20</option>
+								<option value="">21</option>
+								<option value="">22</option>
+								<option value="">23</option>
+							</select>
+								<select class="small">
+								<option selected="selected" value="">00</option>
+								<option value="">30</option>
+							</select>
+							</div>
+							<div class="line">
+								<label>会社情報</label>
+								<input type="text" class="small"/> <a href="client_info.html">検索</a>
+							</div>
+							<div class="line">
+								<label>予定</label>
+								<select class="small">
+								<option selected="selected" value="">会議</option>
+								<option value="">休み</option>
+								</select>
+								<input type="text" class="medium"/>
+							</div>
+							<div class="line">
+								<label>メモ</label>
+								<textarea class="big" rows="" cols=""></textarea>
+							</div>
+							<div class="line">
+								<label>参加者</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line">
+								<label>施設</label>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+								</select>
+										</th>
+										<th>
+								<select multiple="multiple" class="multi" size="6">
+									<option selected="selected" value="">Option 01</option>
+									<option value="">Option 02</option>
+									<option value="">Option 03</option>
+									<option value="">Option 04</option>
+									<option value="">Option 05</option>
+									<option value="">Option 06</option>
+									<option value="">Option 07</option>
+									<option value="">Option 08</option>
+									<option value="">Option 09</option>
+									<option value="">Option 10</option>
+								</select>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="line">
+								<label></label>
+								<input type="radio" name="radiobutton2" id="radio3-1" checked="checked" /> 
+								<label for="radio3-1">公開</label>
+								
+								<input type="radio" name="radiobutton2" id="radio3-2" /> 
+								<label for="radio3-2">非公開</label>
+							</div>
+							<div class="line button">
+							<button type="submit" class="blue"><span>登録</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="split">&#169; Copyright neusoft</div>
+			<div class="split right">Powered by neusoft</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/superfish.js"></script>
+	<script type="text/javascript" src="js/supersubs.js"></script>
+	<script type="text/javascript" src="js/hoverIntent.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/jquery.graphtable-0.2.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.resize.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-select.js"></script>
+	<script type="text/javascript" src="js/customInput.jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript" src="js/jquery.filestyle.mini.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+	<script type="text/javascript" src="js/jquery.treeview.js"></script>
+	<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+	<script type="text/javascript" src="js/plugins/wysiwyg.rmFormat.js"></script>
+	<script type="text/javascript" src="js/controls/wysiwyg.image.js"></script>
+	<script type="text/javascript" src="js/controls/wysiwyg.link.js"></script>
+	<script type="text/javascript" src="js/controls/wysiwyg.table.js"></script>
+	<script type="text/javascript" src="js/inline.js"></script>
+
+</body>
+
+</html>
